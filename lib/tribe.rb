@@ -4,7 +4,7 @@ class Tribe
 	def initialize (options={})
 		@name = options[:name]
 		@members = options[:members]
-	  puts "#{@name} has been created."
+	  puts "#{@name} has been created.".pink
 	end
 
   def to_s

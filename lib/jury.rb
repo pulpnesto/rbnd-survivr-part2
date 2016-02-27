@@ -15,7 +15,7 @@ class Jury
 		@members.each do |member|
 			selection = finalists.sample
 			votes["#{selection}"] += 1
-			puts "#{selection}"
+			puts "#{member} votes for #{selection}".blue
 		end
 		votes
 	end
@@ -25,7 +25,9 @@ class Jury
 	end
 
 	def announce_winner(final_votes)
-	  final_votes.max_by{|k,v| v}[0]
+	  winner = final_votes.max_by{|k,v| v}[0]
+	  puts "#{winner} has won Survivor!".red
+	  winner
 	end
 
 end
