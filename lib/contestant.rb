@@ -8,6 +8,6 @@ class Contestant
 
   # Method to duck type the Sting method to_s
   def to_s
-  	@name
+    @name
   end
 end
